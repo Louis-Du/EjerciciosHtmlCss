@@ -1,24 +1,34 @@
 <html>
 <head> 
+    <!-- Se vincula el archivo CSS para los estilos del slider -->
     <link rel="stylesheet" href="style.css">
-    <h1>Carrousel / Slider</h1>   
 </head>
-<body>
 
+<body>
+    <!-- Título principal de la página -->
+    <h1>Carrousel / Slider</h1>   
     <section class="container">
-        <div class="slider-wrappe">
+
+        <!-- Contenedor principal del slider -->
+        <div class="slider-wrapper">
+
+            <!-- Contenedor de las imágenes del slider -->
             <div class="slider">
+                <!-- Cada imagen representa una diapositiva del slider. 
+                     El atributo id permite enlazar desde la navegación. -->
                 <img id="slider-1" src="recurse/image1.jpg" alt="">
                 <img id="slider-2" src="recurse/image2.jpg" alt="">
                 <img id="slider-3" src="recurse/image3.jpg" alt="">
             </div>
+
+            <!-- Navegación del slider: cada enlace te lleva a una imagen por su id -->
             <div class="slider-nav">
                 <a href="#slider-1"></a>
                 <a href="#slider-2"></a>
                 <a href="#slider-3"></a>
             </div>
         </div>
-        
+    </section>
 </body>
 </html>
 

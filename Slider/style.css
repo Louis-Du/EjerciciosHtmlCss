@@ -1,50 +1,58 @@
+/* Reinicia los márgenes y el relleno de todos los elementos 
+    para evitar inconsistencias entre navegadores */
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye el padding y border dentro del ancho/alto del elemento */
 }
 
+/* Contenedor del slider y navegación */
 .slider-wrapper{
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
+    position: relative;      /* Permite posicionar elementos relativos a este contenedor */
+    max-width: 1000px;      /* Limita el ancho máximo */
+    margin: 0 auto;         /* Centra horizontalmente */
 }
 
+/* Contenedor de las imágenes del slider */
 .slider{
-    display: flex;
-    aspect-ratio: 16/9;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 .25rem .5rem #21212126;
-    border-radius: .5rem;
+    display: flex;          /* Dispone las imágenes en línea, una al lado de la otra */
+    aspect-ratio: 16/9;     /* Relación de aspecto para mantener el formato panorámico */
+    overflow-x: hidden;     /* Oculta el contenido que se desborda horizontalmente */
+    scroll-snap-type: x mandatory; /* Hace que el scroll “encaje” en cada imagen */
+    scroll-behavior: smooth;       /* Animación suave al hacer scroll */
+    box-shadow: 0 .25rem .5rem #21212126; /* Sombra sutil alrededor del slider */
+    border-radius: .5rem;   /* Bordes redondeados */
 }
 
+/* Formato para cada imagen dentro del slider */
 .slider img{
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
+    flex: 1 0 100%;         /* Cada imagen ocupa todo el ancho disponible */
+    scroll-snap-align: start; /* Hace que el scroll encaje justo al inicio de cada imagen */
+    object-fit: cover;      /* La imagen se ajusta y recorta para rellenar su espacio */
 }
 
+/* Contenedor de la navegación del slider */
 .slider-nav{
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+    display: flex;              /* Los botones de navegación (a) aparecen en línea */
+    column-gap: 1rem;           /* Espacio entre cada botón */
+    position: absolute;         /* Posiciona la navegación sobre el slider */
+    bottom: 1.25rem;            /* Ubica la navegación en la parte inferior del slider */
+    left: 50%;                  /* Centra horizontalmente respecto al contenedor */
+    transform: translateX(-50%);/* Ajuste para centrar exactamente */
+    z-index: 1;                 /* Asegura que esté por encima de las imágenes */
 }
 
+/* Cada botón de navegación */
 .slider-nav a{
-    width: .5rem;
-    height: .5rem;
-    border-radius:  50%;
-    background-color: #fff;
-    opacity: .75;
-    transition: opacity ease 250ms;
+    width: .9rem;               /* Tamaño del botón, cuadrado pequeño */
+    height: .9rem;
+    border-radius:  50%;        /* Lo convierte en un círculo */
+    background-color: #fff;     /* Fondo blanco */
+    opacity: .75;               /* Botones semi-transparentes */
+    transition: opacity ease 250ms; /* Animación suave cuando cambia la opacidad */
 }
 
+/* efecto al pasar el mouse sobre el botón */
 .slider-nav a:hover{
-    opacity: 1;
+    opacity: 1;                 /* Botón completamente visible al hacer hover */
 }
