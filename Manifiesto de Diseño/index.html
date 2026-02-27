@@ -1,68 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diseño de Futuro - Inteligencia Real</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="cuerpo">
+<body id="cuerpo">
     <header>
         <div class="contenedor">
-            <div class="logo">Logo</div>
+            <div id="logo"><strong>LOGO</strong></div>
 
             <nav>
-                <a href="#"> Inicio</a>
-                <a href="#"> Servicios</a>
-                <a href="#"> Contacto</a>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#bloque-dos">Tecnología</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </nav>
         </div>
     </header>
     
-    <!-- Contenedor principal-->
     <main>
-        
-        <article class="articulo">
-            
-            <section>
+        <section id="inicio" class="presentacion">
+            <video autoplay muted loop playsinline class="video-bg">
+                <source src="recurse/videofondo.mp4" type="video/mp4">
+            </video>
+            <div class="capa-texto">
                 <h1>Diseñamos el futuro <br> con inteligencia real.</h1>
-                <div>
-                    <img src="recurse/tecnologi.jpg" alt="">
-                </div>
-                <div>
-                    <p> Creamos soluciones digitales que no solo funcionan, sino que evolucionan. Cada línea de código es una decisión estratégica orientada a rendimiento, claridad y escalabilidad.
-                    Diseñamos experiencias que anticipan el comportamiento del usuario, optimizando cada interacción mediante análisis inteligente de datos en tiempo real.
-                    Nuestro enfoque combina estética minimalista con arquitectura sólida, logrando productos que no solo impactan visualmente, sino que resisten el paso del tiempo.</p>
-                    <br>
-                    <p>No solo creamos sitios web; construimos ecosistemas digitales que aprenden, evolucionan y conectan con tu audiencia de manera orgánica y eficiente.</p>
-                    <br>
-                    <p>Innovación constante: Exploramos las fronteras de lo posible para ofrecer soluciones que hoy parecen ciencia ficción.</p>
-                    <br>
-                    <p>Nuestra metodología combina el diseño centrado en el humano con la precisión del procesamiento de datos en tiempo real.</p>
-
-                </div>
-            </section>
-        </article>
-
-        <aside class="aside">
-            <div>
-                <p> ¿Listo para escalar? Transformamos ideas en plataformas digitales inteligentes, seguras y preparadas para el futuro.</p>
+                <a href="#bloque-dos" class="btn-scroll">Sigamos</a>
             </div>
+        </section>
+        
+        <div id="bloque-dos" class="contenedor-dos-columnas">
             
-            <div>
-                <img src="recurse/ai.webp" alt="">
-            </div>
-            
-            <div>
+            <article class="articulo">
+                <section id="contenido" class="contenido">
+                    <div class="imagen-principal">
+                        <img src="recurse/tecnologi.jpg" alt="Tecnología de vanguardia">
+                    </div>
+                    
+                    <div class="texto-principal">
+                        <p>Creamos soluciones digitales que no solo funcionan, sino que evolucionan. Cada línea de código es una decisión estratégica orientada a rendimiento, claridad y escalabilidad.</p>
+                        
+                        <p>Diseñamos experiencias que anticipan el comportamiento del usuario, optimizando cada interacción mediante análisis inteligente de datos en tiempo real.</p>
+                        
+                        <p>Nuestro enfoque combina estética minimalista con arquitectura sólida, logrando productos que no solo impactan visualmente, sino que resisten el paso del tiempo.</p>
 
-            </div>
-        </aside>
-    </main>
+                        <p>No solo creamos sitios web; construimos ecosistemas digitales que aprenden, evolucionan y conectan con tu audiencia de manera orgánica y eficiente.</p>
+
+                        <p>Innovación constante: Exploramos las fronteras de lo posible para ofrecer soluciones que hoy parecen ciencia ficción.</p>
+
+                        <p>Nuestra metodología combina el diseño centrado en el humano con la precisión del procesamiento de datos en tiempo real.</p>
+                    </div>            
+                </section>
+            </article>
+
+            <aside class="aside">
+                <div class="aside-content">
+                    <p><strong>¿Listo para escalar?</strong></p>
+                    <p>Transformamos ideas en plataformas digitales inteligentes, seguras y preparadas para el futuro.</p>
+                    <img src="recurse/ai.webp" alt="Inteligencia Artificial">
+                </div>
+            </aside>
+
+        </div> </main>
 
     <footer>
-        <h1>Ejemplo del footer</h1>
+        <p>© 2026 - Luis Dueñas. Todos los derechos reservados.</p>
     </footer>
-</body>
 
+</body>
 </html>

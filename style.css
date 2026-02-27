@@ -1,0 +1,34 @@
+/* Reset general */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Fondo oscuro como el de tus fotos */
+    color: white;
+    font-family: 'serif'; /* Usa una fuente elegante */
+}
+
+/* Estilo para el Bloque 1 */
+.hero-section {
+    height: 100vh; 
+    background-image: url('tu-imagen-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para el Bloque 2 */
+.favorites-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}

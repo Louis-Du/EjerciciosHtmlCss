@@ -1,149 +1,182 @@
-/* Reinicia los márgenes y el relleno de todos los elementos 
-    para evitar inconsistencias entre navegadores */
-*{
+/* 1. RESET Y BASES */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Incluye el padding y border dentro del ancho/alto del elemento */
+    box-sizing: border-box;
 }
 
-
-/* Configuración del header */
-header{
-    background-color:  rgba(16, 16, 16, 0.8);;
-    backdrop-filter: blur(10px);
-    height: 100px;
-    width: 100%;
-    justify-content: center;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 4px 3px rgb(0, 0, 0, .5);
-    position: fixed; /* Hace que el header se mantenga fijo en la parte superior al hacer scroll (Stikyheade)*/
+html {
+    scroll-behavior: smooth; /* Movimiento fluido al hacer clic en 'Sigamos' */
 }
 
-
-/* Contenedor del contenido dentro del header */
-.contenedor{
-    width: 70%;
-    display: flex;
-    justify-content: space-around; 
-}
-
-
-/* Configuración de la navegación dentro del header */
-.contenedor nav{
-    display: flex;
-    align-items: center;
-    gap: 30px; /* Espacio entre los enlaces de navegación */
-    margin: 0;
-}
-
-
-/* Configuración de los enlaces de navegación y el título dentro del header */
-.contenedor nav a{
-    text-decoration: none; 
-    color: white; 
-}
-
-.contenedor h1{
-    color: white; /* Color del texto del título */
-}
-
-
-/*Configuración del body*/
-.cuerpo{
-  background-color: #101010; /* --_colors---grayscale--chaos-black */
-  background-image: radial-gradient(
-    circle at 50% 50%, 
-    rgba(53, 72, 254, 0.15) 0%, /* --_colors---brand--bright-greek con opacidad */
-    transparent 60%
-  );
-  min-height: 100vh;
-  margin: 0;
-  padding: 0 var(--horizontal-spaser--default);
-}
-
-
-/*Configuración del main*/
-main{
-    background-color: transparent;
-    width: 100%;
+#cuerpo {
+    background-color: #101010;
+    background-image: radial-gradient(
+        circle at 50% 50%, 
+        rgba(53, 72, 254, 0.15) 0%, 
+        transparent 60%
+    );
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 100px;
-}
-
-
-/*Configuración del article*/
-.articulo section h1 {
+    font-family: 'Inter', sans-serif;
     color: white;
-    font-size: 5.5vw; 
-    font-family: sans-serif; 
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
 }
 
-.articulo section div h2 {
-    margin: 20px 0 0 0;
-    font-size: 1.1rem; 
-    color: #ffffff;    
-    font-weight: 400;
-}
-
-.articulo section div img{
-    display: block;
-    margin: 40px auto; 
-    width: 70%;    
-    max-width: 600px; /* DEBE SER IGUAL AL DEL TEXTO */
-    height: auto;   
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(53, 72, 254, 0.3); 
-    filter: brightness(1.1);
-}
-
-.articulo section div p{
-    margin: 2px 0 0 0;
-    font-size: 1.0em;
-    color: rgb(216, 255, 255);
-    width: 90%;
-}
-
-
-/*Confifguración del aside*/
-.aside{
-    background: rgba(255,255,255,0.05);
+/* 2. HEADER (Sticky/Fixed) */
+header {
+    background-color: rgba(16, 16, 16, 0.8);
     backdrop-filter: blur(10px);
-    width: 30%;
-    min-height: 100vh;
+    height: 80px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contenedor {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor nav {
+    display: flex;
+    gap: 30px;
+}
+
+.contenedor nav a, #logo {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* 3. SECCIÓN PRESENTACIÓN (BLOQUE 1 - Pantalla Completa) */
+.presentacion {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa todo el alto de la ventana */
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: 0px 0px 8px rgba(248, 247, 247, 0.1);
-    color: rgb(216, 255, 255);
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
 }
 
-.aside div img{
-    display: block;
-    margin: 30px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Al fondo */
+    filter: brightness(40%); 
 }
 
+.presentacion h1 {
+    position: relative;
+    z-index: 10; /* Arriba del video */
+    color: white;
+    font-size: 5vw;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
 
-/*Configuración del footer*/
-footer{
-    background-color: #222;
+.btn-scroll {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-scroll:hover {
+    background-color: white;
+    color: black;
+}
+
+/* 4. BLOQUE DOS (Contenido + Aside) */
+.contenedor-dos-columnas {
+    display: flex; /* Alinea Artículo y Aside lado a lado */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.articulo {
+    flex: 3; /* Ocupa el 75% del ancho */
+    padding: 40px;
+}
+
+#contenido {
+    scroll-margin-top: 100px; /* Evita que el header tape el inicio al bajar */
+}
+
+#contenido img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 30px rgba(53, 72, 254, 0.2);
+}
+
+#contenido p {
+    color: #d8ffff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* 5. ASIDE (Barra Lateral Pegajosa) */
+.aside {
+    flex: 1; /* Ocupa el 25% del ancho */
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 100px; /* Distancia desde el tope del navegador */
+    height: fit-content;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.aside img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* 6. FOOTER */
+footer {
+    background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 50px 0;
+    margin-top: 50px;
+}
+
+/* 7. RESPONSIVE (Para celulares) */
+@media (max-width: 768px) {
+    .contenedor-dos-columnas {
+        flex-direction: column; /* Aside se va abajo del contenido */
+    }
+    
+    .aside {
+        position: static;
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .presentacion h1 {
+        font-size: 10vw;
+    }
 }
