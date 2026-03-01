@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,10 @@
 </head>
 
 <body id="cuerpo">
+<!--HEADER-->
     <header>
         <div class="contenedor">
             <div id="logo"><strong>LOGO</strong></div>
-
             <nav>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#bloque-dos">Tecnología</a></li>
@@ -20,8 +21,9 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
+<!--SECCIÓN DE PRESENTACIÓN (BLOQUE 1)-->
         <section id="inicio" class="presentacion">
             <video autoplay muted loop playsinline class="video-bg">
                 <source src="recurse/videofondo.mp4" type="video/mp4">
@@ -31,55 +33,73 @@
                 <a href="#bloque-dos" class="btn-scroll">Sigamos</a>
             </div>
         </section>
-        
+
+<!--SECCIÓN DE CONTENIDO (BLOQUE 2)-->
         <div id="bloque-dos" class="contenedor-dos-columnas">
-            
             <article class="articulo">
                 <section id="contenido" class="contenido">
                     <div class="imagen-principal">
                         <img src="recurse/tecnologi.jpg" alt="Tecnología de vanguardia">
                     </div>
-                    
+
                     <div class="texto-principal">
-                        <p>Creamos soluciones digitales que no solo funcionan, sino que evolucionan. Cada línea de código es una decisión estratégica orientada a rendimiento, claridad y escalabilidad.</p>
-                        
-                        <p>Diseñamos experiencias que anticipan el comportamiento del usuario, optimizando cada interacción mediante análisis inteligente de datos en tiempo real.</p>
-                        
-                        <p>Nuestro enfoque combina estética minimalista con arquitectura sólida, logrando productos que no solo impactan visualmente, sino que resisten el paso del tiempo.</p>
+                        <p>Creamos soluciones digitales que no solo funcionan, sino que evolucionan. Cada línea de
+                            código es una decisión estratégica orientada a rendimiento, claridad y escalabilidad.</p>
 
+                        <p>Diseñamos experiencias que anticipan el comportamiento del usuario, optimizando cada
+                            interacción mediante análisis inteligente de datos en tiempo real.</p>
+
+                        <p>Nuestro enfoque combina estética minimalista con arquitectura sólida, logrando productos que
+                            no solo impactan visualmente, sino que resisten el paso del tiempo.</p>
+
+                        <p>No solo creamos sitios web; construimos ecosistemas digitales que aprenden, evolucionan y
+                            conectan con tu audiencia de manera orgánica y eficiente.</p>
+
+                        <p>Innovación constante: Exploramos las fronteras de lo posible para ofrecer soluciones que hoy
+                            parecen ciencia ficción.</p>
+
+                        <p>Nuestra metodología combina el diseño centrado en el humano con la precisión del
+                            procesamiento de datos en tiempo real.</p>
                     </div>
-                    
-                    <section class="galeria">
-                        <img src="recurse/galeria-1.jpg" alt="Galería de imagenes">
-                        <img src="recurse/galeria-2.jpg" alt="Galería de imagenes">
-                        <img src="recurse/galeria-3.jpg" alt="Galería de imagenes">
-                        <img src="recurse/galeria-4.jpeg" alt="Galería de imagenes">
-                        <img src="recurse/galeria-5.jpeg" alt="Galería de imagenes">
-                        <img src="recurse/galeria-6.jpeg" alt="Galería de imagenes">
-                    </section>
-                    <div class="texto-secundario">
-                        <p>No solo creamos sitios web; construimos ecosistemas digitales que aprenden, evolucionan y conectan con tu audiencia de manera orgánica y eficiente.</p>
-
-                        <p>Innovación constante: Exploramos las fronteras de lo posible para ofrecer soluciones que hoy parecen ciencia ficción.</p>
-
-                        <p>Nuestra metodología combina el diseño centrado en el humano con la precisión del procesamiento de datos en tiempo real.</p>
-                    </div>            
                 </section>
             </article>
 
+<!--ASIDE-->
             <aside class="aside">
                 <div class="aside-content">
-                    <p><strong>¿Listo para escalar?</strong></p>
-                    <p>Transformamos ideas en plataformas digitales inteligentes, seguras y preparadas para el futuro.</p>
-                    <img src="recurse/ai.webp" alt="Inteligencia Artificial">
+                    <h2>¿Listo para escalar?</h2>
+                    <p>Transformamos ideas en plataformas digitales inteligentes, seguras y preparadas para el futuro.
+                    </p>
+<!--GRID - GALERIA DE IMAGENES-->
+                    <div id="galeria">
+                        <div id="imagen1">
+                            <img src="recurse/galeria-1.jpeg" alt="Galería de imagenes">
+                        </div>
+                        <div id="imagen2">
+                            <img src="recurse/galeria-2.jpeg" alt="Galería de imagenes">
+                        </div>
+                        <div id="imagen3">
+                            <img src="recurse/galeria-3.jpg" alt="Galería de imagenes">
+                        </div>
+                        <div id="imagen4">
+                            <img src="recurse/galeria-4.jpeg" alt="Galería de imagenes">
+                        </div>
+                        <div id="imagen5">
+                            <img src="recurse/galeria-5.jpeg" alt="Galería de imagenes">
+                        </div>
+                        <div id="imagen6">
+                            <img src="recurse/galeria-6.jpeg" alt="Galería de imagenes">
+                        </div>
+                    </div>
                 </div>
             </aside>
 
-        </div> </main>
+        </div>
+    </main>
 
-    <footer>
+<!--FOOTER-->
+    <footer id="contacto">
         <p>© 2026 - Luis Dueñas. Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>

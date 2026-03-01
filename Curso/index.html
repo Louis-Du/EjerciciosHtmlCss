@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <nav> 
-            <a href="#"> home </a> 
+        <nav>
+            <a href="#"> home </a>
             <a href="#"> about </a>
             <a href="#"> contact </a>
         </nav>
@@ -17,20 +19,31 @@
     <main>
         <h1 id="title">Mi página web</h1>
     </main>
-    <article>
-        <p>Esta es una página de ejemplo que hago realizando un tutorial de HTML, CSS y JavaScript.</p>
-        <a href="https://www.udemy.com/course/desarrollo-web-con-html-css-y-javascript-desde-cero" upload = "Udemy">Curso que estoy siguiendo</a>
-    </article>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-    <h3 id="learning">Temario</h3>
+    <div id="home">
+        <div id="home1">
+            <h3 class="divhome">¿A quién va dirigido?</h3>
+            <article>
+                <p class="divhome">Esta es una página de ejemplo que hago realizando un tutorial de HTML, CSS y
+                    JavaScript.</p>
+                <a href="https://www.udemy.com/course/desarrollo-web-con-html-css-y-javascript-desde-cero"
+                    upload="Udemy">Curso que estoy siguiendo</a>
+            </article>
+        </div>
+        <div id="home2">
+            <ul>
+                <li class="divhome">HTML</li>
+                <li class="divhome">CSS</li>
+                <li class="divhome">JavaScript</li>
+            </ul>
+            <h3 id="learning">Temario</h3>
+        </div>
+    </div>
+
     <div class="temario">
         <li>HTML</li> <img src="Recurse/html-banner.png" alt="html"></img>
         <li>CSS</li> <img src="Recurse/images.jpeg" alt="css"></img>
-        <li id="javascript">JavaScript</li> <img src="Recurse/javascript-logo-banner-560x272.jpg" alt="javascript"></img>
+        <li id="javascript">JavaScript</li> <img src="Recurse/javascript-logo-banner-560x272.jpg"
+            alt="javascript"></img>
     </div>
     <footer>
         <form action="">
@@ -42,4 +55,5 @@
         </form>
     </footer>
 </body>
+
 </html>
